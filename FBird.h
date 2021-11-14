@@ -2,13 +2,21 @@
 // Created by nik on 14.11.2021.
 //
 #include "GEngine/GObj.h"
+#include <memory>
 #ifndef FLAPPY_BIRD_FBIRD_H
 #define FLAPPY_BIRD_FBIRD_H
 
-class FBird : public GObject{
+class FBird : public GObj{
 public:
-    void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-    void processEvent(int iEventIdx);
+    FBird();
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+    void processEvent(int iEventIdx) override;
+    ~FBird() override;
+private:
+    std::shared_ptr<sf::CircleShape> bird;
+    double velocity;
+    double mass;
+
 };
 
 #endif //FLAPPY_BIRD_FBIRD_H
