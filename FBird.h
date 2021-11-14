@@ -6,7 +6,7 @@
 #ifndef FLAPPY_BIRD_FBIRD_H
 #define FLAPPY_BIRD_FBIRD_H
 
-class FBird : public GObj{
+class FBird : public GObjSolid{
 public:
     FBird();
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
@@ -14,9 +14,6 @@ public:
     ~FBird() override;
 private:
     std::shared_ptr<sf::CircleShape> bird;
-    double velocity;
-    double mass;
-
 };
 
 #endif //FLAPPY_BIRD_FBIRD_H
