@@ -8,12 +8,13 @@
 
 class FBird : public GObjSolid{
 public:
-    FBird();
+    FBird(const sf::Vector2f& iPosition);
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     void processEvent(int iEventIdx) override;
     ~FBird() override;
 private:
     std::shared_ptr<sf::CircleShape> bird;
+    bool isForced;
 };
 
 #endif //FLAPPY_BIRD_FBIRD_H

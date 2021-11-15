@@ -5,8 +5,9 @@
 #ifndef FLAPPY_BIRD_GFBIRD_H
 #define FLAPPY_BIRD_GFBIRD_H
 namespace FB{
-    const sf::Vector2f gravity(0.0,1.0);
-    const sf::Vector2f momentum(0.0,-1.0);
+    const sf::Vector2f gravity(0.0,0.4);
+    const sf::Vector2f momentum(0.0,-5.0);
+    const sf::Vector2f defaultBirdPos(300,100);
 };
 class GFlappyBird: public GGame{
 public:
@@ -23,8 +24,9 @@ private:
         Momentum
     };
     enum Objects{
-        Background,
         Bird
+        //Background,
+
     };
 };
 #endif //FLAPPY_BIRD_GFBIRD_H
