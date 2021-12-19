@@ -8,6 +8,7 @@ const int objectsCount = 1;
 GFlappyBird::GFlappyBird(int iWinWidth, int iWinHeight) {
   winWidth = iWinWidth;
   winHeight = iWinHeight;
+  //TODO: is this necessary?
   eventsPool.resize(eventsCount);
   objects.resize(objectsCount);
   init();

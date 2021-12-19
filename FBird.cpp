@@ -25,7 +25,7 @@ void FBird::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 }
 
 void FBird::processEvent(int iEventIdx) {
-  std::shared_ptr<GEvent> event = events[iEventIdx];
+  auto event = events[iEventIdx];
   if (event->type == GEvent::Force) {
     std::shared_ptr<GEventForce> forceEvent = std::static_pointer_cast<GEventForce>(event);
     if (forceEvent->getVector() == FB::momentum){
